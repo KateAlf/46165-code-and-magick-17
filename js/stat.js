@@ -44,8 +44,8 @@ window.renderStatistics = function (ctx, names, times) {
 
   for (var i = 0; i < names.length; i++) {
     ctx.fillStyle = COLOR_TEXT;
-    ctx.fillText(names[i], CLOUD_X + (GAP * 4) + (WIDTH_BAR + GAP_BAR) * i, NAME_Y);
+    ctx.fillText(names[i], CLOUD_X + WIDTH_BAR + (WIDTH_BAR + GAP_BAR) * i, NAME_Y);
     ctx.fillStyle = colorsBar[i];
-    ctx.fillRect(CLOUD_X + (GAP * 4) + (WIDTH_BAR + GAP_BAR) * i, BAR_Y, WIDTH_BAR, HEIGHT_BAR * times[i] / maxTime);
+    ctx.fillRect(CLOUD_X + WIDTH_BAR + (WIDTH_BAR + GAP_BAR) * i, BAR_Y, WIDTH_BAR, HEIGHT_BAR * times[i] / maxTime);
   }
 };
